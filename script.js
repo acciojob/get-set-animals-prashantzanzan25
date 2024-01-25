@@ -1,43 +1,47 @@
-//complete this code
-class Animal {
-  constructor(species) {
-    this._species = species;
+// Class definitions
+
+class Person {
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
   }
 
-  get species() {
-    return this._species;
+  // Getter for name
+  get name() {
+    return this._name;
   }
 
-  makeSound() {
-    console.log(`The ${this.species} makes a sound`);
-  }
-}
-
-class Cat extends Animal {
-  makeSound() {
-    console.log("purr");
-    // You can uncomment the line below if you want to include the generic sound message
-    // super.makeSound();
-  }
-
-  purr() {
-    console.log("purr");
+  // Setter for age
+  set age(value) {
+    this._age = value;
   }
 }
 
-class Dog extends Animal {
-  makeSound() {
-    console.log("woof");
-    // You can uncomment the line below if you want to include the generic sound message
-    // super.makeSound();
+class Student extends Person {
+  // Constructor for Student class
+  constructor(name, age) {
+    super(name, age);
   }
 
-  bark() {
-    console.log("woof");
+  // Method specific to Student class
+  study() {
+    console.log(${this.name} is studying);
   }
 }
 
-// Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
+class Teacher extends Person {
+  // Constructor for Teacher class
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  // Method specific to Teacher class
+  teach() {
+    console.log(${this.name} is teaching);
+  }
+}
+
+// Assigning classes to the window object
+window.Person = Person;
+window.Student = Student;
+window.Teacher = Teacher;
