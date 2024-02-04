@@ -24,8 +24,3 @@ class Dog extends Animal {
     console.log("woof");
   }
 }
-
-// Assigning classes to the window object
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
