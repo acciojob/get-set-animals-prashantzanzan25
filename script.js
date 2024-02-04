@@ -1,43 +1,27 @@
 // Class definitions
-
-class Person {
-  constructor(name, age) {
-    this._name = name;
-    this._age = age;
+class Animal {
+  constructor(species) {
+    this._species = species;
   }
 
-  // Getter for name
-  get name() {
-    return this._name;
+  get species() {
+    return this._species;
   }
 
-  // Setter for age
-  set age(value) {
-    this._age = value;
+  makeSound() {
+    console.log(`The ${this.species} makes a sound`);
   }
 }
 
-class Student extends Person {
-  // Constructor for Student class
-  constructor(name, age) {
-    super(name, age);
-  }
-
-  // Method specific to Student class
-  study() {
-    console.log(${this.name} is studying);
+class Cat extends Animal {
+  purr() {
+    console.log("purr");
   }
 }
 
-class Teacher extends Person {
-  // Constructor for Teacher class
-  constructor(name, age) {
-    super(name, age);
-  }
-
-  // Method specific to Teacher class
-  teach() {
-    console.log(${this.name} is teaching);
+class Dog extends Animal {
+  bark() {
+    console.log("woof");
   }
 }
 
