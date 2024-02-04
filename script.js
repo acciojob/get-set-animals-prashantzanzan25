@@ -1,26 +1,31 @@
-// Class definitions
 class Animal {
-  constructor(species) {
-    this._species = species;
+  constructor(private species: string) {}
+
+  getSpecies(): string {
+    return this.species;
   }
 
-  get species() {
-    return this._species;
-  }
-
-  makeSound() {
+  makeSound(): void {
     console.log(`The ${this.species} makes a sound`);
   }
 }
 
 class Cat extends Animal {
-  purr() {
+  constructor(species: string) {
+    super(species);
+  }
+
+  purr(): void {
     console.log("purr");
   }
 }
 
 class Dog extends Animal {
-  bark() {
+  constructor(species: string) {
+    super(species);
+  }
+
+  bark(): void {
     console.log("woof");
   }
 }
